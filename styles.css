@@ -66,6 +66,16 @@ body {
     background-color: #c8c8c8;
 }
 
+/* Alinea el enlace a la izquierda dentro del contenedor */
+.login-container a {
+    display: block;
+    text-align: left;
+    margin-top: 10px;
+    color: #0000ee;
+    text-decoration: underline;
+    font-size: 12px;
+}
+
 /* Mensaje de error o info */
 #mensaje {
     margin-top: 10px;
