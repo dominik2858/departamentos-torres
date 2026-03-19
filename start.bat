@@ -1,7 +1,7 @@
 @echo off
 REM -------------------------------
 REM Start script para Windows
-REM Busca nodemon -> node -> error
+REM Usa solo nodemon local
 REM -------------------------------
 
 SETLOCAL
@@ -20,24 +20,8 @@ IF EXIST "%NODE_MODULE_BIN%\nodemon.cmd" (
     GOTO END
 )
 
-REM Comprobar nodemon global
-where nodemon >nul 2>&1
-IF %ERRORLEVEL%==0 (
-    echo Iniciando con nodemon global...
-    nodemon %FILE%
-    GOTO END
-)
-
-REM Comprobar node global
-where node >nul 2>&1
-IF %ERRORLEVEL%==0 (
-    echo Nodemon no encontrado, iniciando con node...
-    node %FILE%
-    GOTO END
-)
-
 REM Ninguno encontrado
-echo ⚠️ No se encontró Node.js ni Nodemon!
+echo ⚠️ No se encontró nodemon local!
 pause
 
 :END
