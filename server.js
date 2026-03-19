@@ -8,10 +8,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // Conexión a MongoDB
-mongoose.connect("mongodb://localhost:27017/torres", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-});
+mongoose.connect("mongodb://localhost:27017/departamentos-torres");
 
 // Modelo de usuario
 const Usuario = mongoose.model("Usuario", {
