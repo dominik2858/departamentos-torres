@@ -1,0 +1,44 @@
+body {
+      margin: 0;
+      height: 100vh;
+      background-color: #6e6c6c;
+      display: flex;
+      justify-content: center; 
+      align-items: center;    
+      font-family: sans-serif;
+    }
+
+    .contenedor-central {
+      display: flex;
+      flex-direction: column; 
+      align-items: center;    
+    }
+
+    h2 {
+      color: black;
+      margin-bottom: 1rem;   
+    }
+
+    .opciones-lista {
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+    }
+
+    .opcion-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.6rem 1rem;
+      background: #f8fafd;
+      border-radius: 1.2rem;
+      transition: background 0.2s ease;
+      border: 1px solid #e2edf7;
+      cursor: pointer;
+      min-width: 120px; /* Para que todos tengan un ancho similar */
+      color: black;            /* texto negro */
+    }
+
+    .opcion-item:hover {
+      background: #ffffff;
+    }

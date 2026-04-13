@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: #6e6c6c;
+
+  display: flex;
+  justify-content: center; 
+  align-items: center;    
+}
+
+.caja {
+  background: white;
+  border-radius: 2rem;
+  box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.25), 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 2.5rem;
+  width: 90%;         
+  max-width: 800px;   
+  
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-sizing: border-box; 
+}

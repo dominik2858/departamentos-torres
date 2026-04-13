@@ -17,6 +17,14 @@ document.getElementById("loginForm").addEventListener("submit", async function(e
     document.getElementById("mensaje").textContent = data.mensaje;
 
     if (data.success) {
-        window.location.href = "home/index.html";
+      setCookie("token",data.token,10 );
+      window.location.href = "home/index.html";
     }
 });
+
+function setCookie(nombre, valor, minutos) {
+  const fecha = new Date();
+  fecha.setTime(fecha.getTime() + (minutos * 60 * 1000));
+  document.cookie = nombre + "=" + valor + ";expires=" + fecha.toUTCString() + ";path=/";
+  document.cookie = "expires" + nombre + "=" + fecha.getTime() + ";expires=" + fecha.toUTCString() + ";path=/";
+}
